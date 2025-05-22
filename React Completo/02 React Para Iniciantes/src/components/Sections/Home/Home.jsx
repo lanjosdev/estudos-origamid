@@ -1,6 +1,7 @@
 import { Title } from "../../Title/Title"
 
 export const Home = () => {
+  
   return (
     <section>
       <Title title={'Home'} />

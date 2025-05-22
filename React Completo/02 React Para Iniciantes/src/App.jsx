@@ -6,7 +6,7 @@ import { Produtos } from './components/Sections/Produtos/Produtos';
 
 const App = () => {
   const { pathname } = window.location; //(puxa o caminho do URL)
-  console.log(pathname)
+  // console.log(pathname)
 
   return (
     <div>
