@@ -21,7 +21,7 @@ export const Produto3 = () => {
       ) : (
 
         dados == null ? (
-          <p>Sem dados de produtos</p>
+          <p>Sem dados dos produtos</p>
         ) : (
           <>
           <p>Produto:</p>

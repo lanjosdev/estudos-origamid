@@ -5,7 +5,7 @@
 // Defina o produto clicado como uma preferência do usuário no localStorage
 // Quando o usuário entrar no site, se existe um produto no localStorage, faça o fetch do mesmo
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Componentes:
 import { Button } from "../components/Button/Button";
@@ -13,18 +13,21 @@ import { Produto2 } from "../components/Produto2/Produto2";
 
 
 export const Exe2 = () => {
-    const [produto, setProduto] = useState(null);
+    const [produto, setProduto] = useState(() => {
+        const preferenceLocalStorage = window.localStorage.getItem('produto') || null;
+        return preferenceLocalStorage;
+    });
 
     
-    useEffect(()=> {
-        function checkDataLocalStorage() {
-            const preferenceLocalStorage = window.localStorage.getItem('produto') || null;
-            if(preferenceLocalStorage != null) {
-                setProduto(preferenceLocalStorage);
-            }
-        }
-        checkDataLocalStorage();
-    }, []);
+    // useEffect(()=> {
+    //     function checkDataLocalStorage() {
+    //         const preferenceLocalStorage = window.localStorage.getItem('produto') || null;
+    //         if(preferenceLocalStorage != null) {
+    //             setProduto(preferenceLocalStorage);
+    //         }
+    //     }
+    //     checkDataLocalStorage();
+    // }, []);
 
 
     function handleSetProduto(e) {
