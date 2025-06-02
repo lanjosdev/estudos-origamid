@@ -65,6 +65,12 @@ textarea {
   border-radius: var(--radius);
   background: #eee;
   transition: 0.2s;
+
+  &[type='radio'],
+  &[type='checkbox'] 
+  {
+    max-width: fit-content;
+  }
 }
 input:focus,
 textarea:focus {
