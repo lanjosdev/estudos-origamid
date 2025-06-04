@@ -1,0 +1,13 @@
+.Home {
+
+    .products {
+        /* background-color: aqua; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @media (max-width: 620px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

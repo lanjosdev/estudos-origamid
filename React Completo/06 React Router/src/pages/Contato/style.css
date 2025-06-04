@@ -1,0 +1,13 @@
+.Contato {
+    display: flex;
+    gap: 2rem;
+
+    .photo {
+        
+        img {
+            width: 100%;
+            max-width: 25rem;
+            border-radius: 10px;
+        }
+    }
+}
