@@ -5,11 +5,16 @@ export const metadata:Metadata = {
   description: "Criado no curso da Origamid",
 };
 
+// Components:
+import { GetWidth } from "@/components/GetWidth/GetWidth";
+
+
 export default function SobrePage() {
   
   return (
-    <main>
+    <main className="SobrePage">
       <h1>Sobre</h1>
+      <GetWidth />
     </main>
   )
 }

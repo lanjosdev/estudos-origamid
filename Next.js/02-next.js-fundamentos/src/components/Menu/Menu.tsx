@@ -1,12 +1,20 @@
+import Link from "next/link";
+
 
 export default function Menu() {
 
     return (
-        <header>
+        <header className="Menu">
             <ul className="menu">
-                <li>Home</li>
-                <li>Sobre</li>
-                <li>Contato</li>
+                <li>
+                    <Link href='/'>Home</Link>
+                </li>
+                <li>
+                    <Link href='/sobre'>Sobre</Link>
+                </li>
+                <li>
+                    <Link href='/imc'>IMC</Link>
+                </li>
             </ul>
         </header>
     )
