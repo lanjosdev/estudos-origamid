@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// Components
+import { Header } from "@/components/Header/Header";
+
 
 export const metadata: Metadata = {
   title: "Origamid Next",
@@ -15,6 +18,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
+        <Header />
+        
         {children}
       </body>
     </html>
