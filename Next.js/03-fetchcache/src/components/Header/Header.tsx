@@ -21,6 +21,12 @@ export async function Header() {
                         <Link href="/">Home</Link>
                     </li>
                     <li>
+                        <Link href="/produtos">Produtos</Link>
+                    </li>
+                    <li>
+                        <Link href="/produtos/adicionar">Add Produto</Link>
+                    </li>
+                    <li>
                         {data?.usuario ? (
                             <Link href="/profile">{data.usuario}</Link>
                         ) : (
