@@ -8,6 +8,7 @@
 import { useState } from "react";
 import { Produto } from "@/app/exercicios/exe3/action-get-products";
 import { actionAddProduct } from "@/app/exercicios/exe3/action-add-product";
+import { actionRedirect } from "@/app/exercicios/exe3/action-redirect";
 
 
 export function AddProduct() {
@@ -34,7 +35,11 @@ export function AddProduct() {
             const response = await actionAddProduct(data);
             console.log(response);
 
-            if(response.error) {
+            // Se a resposta for bem-sucedida, redireciona para a página de produtos
+            if(response.success) {
+                await actionRedirect('/produtos');
+            } 
+            else if(response.error) {
                 setHasError('Ops, houve erro ao adicionar o produto.');
             } 
             else if(!response.success) {
